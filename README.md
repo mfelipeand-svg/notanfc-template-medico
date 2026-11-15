@@ -31,7 +31,7 @@ Requer Node.js 20 ou superior.
 npm run build
 ```
 
-A saída estática é gerada em `dist-static/`. A configuração `vercel.json` já aponta para essa pasta. O build também valida referências locais, sintaxe dos arquivos JavaScript, campos vazios dos comparadores e ausência de dados identificáveis do projeto anterior.
+A saída estática é gerada em `dist-static/`. A configuração `vercel.json` já aponta para essa pasta. O build também valida referências locais, sintaxe dos arquivos JavaScript, campos vazios dos comparadores e ausência de links de contato com dados fixos.
 
 ## Importante
 Este repositório é um template. Não publique enquanto houver campos entre colchetes, links de contato não configurados ou imagens de demonstração.
