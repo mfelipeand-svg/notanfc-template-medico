@@ -1,27 +1,37 @@
 # NotaNFC+ — Template Médico
 
-Template-base de landing page para profissionais e clínicas da área da saúde.
+Template estático e reutilizável para sites institucionais de profissionais e clínicas da área da saúde.
 
-## Objetivo
-Reutilizar uma estrutura institucional já desenvolvida, mantendo a arquitetura de conteúdo e os componentes de interface, mas sem dados, fotografias, logotipo ou identidade visual de clientes anteriores.
-
-## Estrutura prevista
-- Apresentação principal (hero)
-- Diferenciais
-- Sobre o profissional
+## Estrutura preservada
+- Hero com carrossel de imagens
+- Diferenciais e apresentação profissional
 - Filosofia de atendimento
-- Especialidades e áreas de atuação
-- Galeria de resultados / antes e depois (conteúdo a inserir somente com autorização e conformidade profissional)
-- Estrutura do consultório
-- Galeria de imagens
-- Contato e chamada para WhatsApp
-- Rodapé institucional
+- Áreas de atuação
+- Comparadores fotográficos antes/depois
+- Galeria de ambientes e retratos com marquee e lightbox
+- Seção de atendimento e contato
+- Menu mobile acessível
+- Efeitos de rolagem e suporte a prefers-reduced-motion
 
-## Personalização por novo cliente
-Substituir os textos entre colchetes, inserir logotipo e identidade visual aprovados, cadastrar contatos e localização corretos e adicionar fotografias autorizadas. Até essa etapa, as imagens devem permanecer como placeholders vazios.
+## Personalização
+1. Substitua os textos entre colchetes pelos dados validados do novo cliente.
+2. Insira a identidade visual aprovada (logo, cores e tipografia).
+3. Substitua os placeholders SVG pelas imagens autorizadas, otimizadas em WebP/AVIF.
+4. Configure os links reais de WhatsApp, endereço e redes sociais.
+5. Revise títulos, descrição SEO, Open Graph e dados estruturados.
+6. Valide informações profissionais, consentimento de uso de imagens e regras de publicidade aplicáveis à profissão.
 
-## Requisitos de publicação
-Antes de publicar, validar conteúdo profissional, links, metadados SEO, acessibilidade, responsividade, desempenho e consentimento para uso de imagens. Não publicar informações fictícias nem dados de outro cliente.
+## Imagens
+Nenhuma fotografia, logo ou arquivo de identidade visual de cliente anterior foi incluído. Todas as imagens visíveis são placeholders genéricos. Para produção, prefira WebP/AVIF, dimensões adequadas, lazy-loading e dimensões explícitas para reduzir CLS.
 
-## Estado
-Estrutura documental inicial. Os arquivos da interface serão adicionados após a revisão e sanitização do projeto-base.
+## Desenvolvimento e build
+Requer Node.js 20 ou superior.
+
+```bash
+npm run build
+```
+
+A saída estática é gerada em `dist-static/`. A configuração `vercel.json` já aponta para essa pasta.
+
+## Importante
+Este repositório é um template. Não publique enquanto houver campos entre colchetes, links de contato não configurados ou imagens de demonstração.
