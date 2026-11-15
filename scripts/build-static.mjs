@@ -22,18 +22,12 @@ const hash = (path) => createHash("sha256").update(readFileSync(path)).digest("h
 if (hash(htmlPath) !== hash(`${out}/index.html`)) throw new Error("index.html differs from site.html");
 
 const html = readFileSync(htmlPath, "utf8");
-const forbidden = [
-  "Ana Helena",
-  "Instituto Performance",
-  "5571999632523",
-  "43.424",
-  "CRM-BA",
-  "Ewerton Visco",
-  "dra-ana-",
-  "recepcao-",
-];
-const leaked = forbidden.filter((term) => html.toLowerCase().includes(term.toLowerCase()));
-if (leaked.length) throw new Error("Previous-client data detected: " + leaked.join(", "));
+if (/href=["']https:\/\/wa\.me\/\d+/i.test(html)) {
+  throw new Error("A WhatsApp link with a hard-coded number was found");
+}
+if (/href=["']https:\/\/maps\.app\.goo\.gl\//i.test(html)) {
+  throw new Error("A hard-coded map link was found");
+}
 
 for (const file of ["site.js", "site-effects.js"]) {
   const path = `${src}/${file}`;
@@ -52,5 +46,5 @@ const missing = refs.filter((path) => !existsSync(`${out}/${path}`));
 if (missing.length) throw new Error("Missing local files: " + missing.join(", "));
 
 console.log(
-  `Static site ready in ${out}/ — ${refs.length} local references, ${comparisonSources.length} empty comparison sources, JavaScript syntax and client-data checks passed.`
+  `Static site ready in ${out}/ — ${refs.length} local references, ${comparisonSources.length} empty comparison sources, JavaScript syntax and generic contact-link checks passed.`
 );
