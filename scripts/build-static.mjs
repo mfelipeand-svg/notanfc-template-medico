@@ -41,7 +41,7 @@ if (comparisonSources.some((match) => match[1].trim() !== "")) {
 
 const refs = [...html.matchAll(/(?:src|href|data-before-src|data-after-src)="([^"#:]+)"/g)]
   .map((match) => match[1])
-  .filter((value) => !value.startsWith("data:"));
+  .filter((value) => !/^(?:data:|https?:|mailto:|tel:|#)/i.test(value));
 const missing = refs.filter((path) => !existsSync(`${out}/${path}`));
 if (missing.length) throw new Error("Missing local files: " + missing.join(", "));
 
