@@ -1,37 +1,42 @@
-# NotaNFC+ — Template Médico
+# NotaNFC+ — Proposta visual Rúbia Gomes
 
-Template estático e reutilizável para sites institucionais de profissionais e clínicas da área da saúde.
+Versão de apresentação comercial personalizada para Rúbia Gomes, adaptada a partir do template estático reutilizável da NotaNFC+.
 
-## Estrutura preservada
-- Hero com carrossel de imagens
-- Diferenciais e apresentação profissional
-- Filosofia de atendimento
-- Áreas de atuação
-- Comparadores fotográficos antes/depois
-- Galeria de ambientes e retratos com marquee e lightbox
-- Seção de atendimento e contato
-- Menu mobile acessível
-- Efeitos de rolagem e suporte a prefers-reduced-motion
+## Estrutura
+- Hero editorial com apresentação e CTA para Instagram
+- Apresentação profissional e filosofia de atendimento
+- Especialidades: colorimetria, mechas, cortes, maquiagem e penteados
+- Vitrine visual de trabalhos
+- Apresentação do espaço e localização geral em Salvador-BA
+- Integração com perfil público do Instagram
+- Layout responsivo e navegação mobile
 
-## Personalização
-1. Substitua os textos entre colchetes pelos dados validados do novo cliente.
-2. Insira a identidade visual aprovada (logo, cores e tipografia).
-3. Substitua os placeholders SVG pelas imagens autorizadas, otimizadas em WebP/AVIF.
-4. Configure os links reais de WhatsApp, endereço e redes sociais.
-5. Revise títulos, descrição SEO, Open Graph e dados estruturados.
-6. Valide informações profissionais, consentimento de uso de imagens e regras de publicidade aplicáveis à profissão.
+## Identidade visual
+Direção editorial em tons de nude, terracota, marrom profundo e off-white. Tipografia Playfair Display + DM Sans. Elementos gráficos temporários foram utilizados para estruturar a proposta enquanto aguardamos fotos autorais, logo e referências visuais aprovadas.
 
-## Imagens
-Nenhuma fotografia, logo ou arquivo de identidade visual de cliente anterior foi incluído. Todas as imagens visíveis são placeholders genéricos. Para produção, prefira WebP/AVIF, dimensões adequadas, lazy-loading e dimensões explícitas para reduzir CLS.
+## Arquivos
+- `public/site.html`
+- `public/site.css`
+- `public/site.js`
+- `public/site-effects.css`
+- `public/site-effects.js`
 
-## Desenvolvimento e build
+## Build estático
 Requer Node.js 20 ou superior.
 
 ```bash
 npm run build
 ```
 
-A saída estática é gerada em `dist-static/`. A configuração `vercel.json` já aponta para essa pasta. O build também valida referências locais, sintaxe dos arquivos JavaScript, campos vazios dos comparadores e ausência de links de contato com dados fixos.
+A saída é gerada em `dist-static/`. A configuração `vercel.json` utiliza essa pasta.
 
-## Importante
-Este repositório é um template. Não publique enquanto houver campos entre colchetes, links de contato não configurados ou imagens de demonstração.
+## Pendências antes de produção
+1. Receber e inserir fotos autorais aprovadas pela profissional.
+2. Confirmar logotipo, identidade visual e textos finais.
+3. Confirmar endereço completo do espaço.
+4. Confirmar número oficial de WhatsApp antes de ativar o botão de agendamento.
+5. Revisar serviços e informações profissionais com a cliente.
+6. Revalidar SEO, acessibilidade e performance com os assets finais.
+
+## Observação
+Esta é uma proposta de apresentação, não uma versão final de produção. O template médico original e o site da Dra. Ana Helena não foram alterados.
